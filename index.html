@@ -35,11 +35,32 @@
           <img id="trash" src="assets/trash.png" alt="Delete" />
         </div>
       </div>
+      
       <div class="sec-three">
-        <a href=""
-          ><div class="sec3">
-            <img id="about" src="assets/about.png" alt="About" /></div
-        ></a>
+          <div onclick = "openPopup()" class="sec3">
+            <img id="about" src="assets/about.png" alt="About" />
+          </div>
+
+          <div class="sec3 about-popup" id="about-popup">
+            <div>
+            <h2 class="about-heading">A little something about Web notes:</h2>
+            <p class="about-para">Web notes is an offline-capable Progressive Web App. <br><br>
+
+              The app serves the following features: <br><br>
+              <ul class="about-list">
+                <li class="about-list-item">Write notes which are then saved to the browser's localStorage.</li>
+                <li class="about-list-item">Installable on supported browsers for offline usage.</li>
+                <li class="about-list-item">"Add To Home Screen" feature on Android-supported devices to launch the app from the home screen.</li>
+                <li class="about-list-item">Privacy-focused - We'll never collect your precious data.</li>
+                <li class="about-list-item">Light-weight - Loads almost instantly.</li>
+                <li class="about-list-item">It's open-source!</li>
+              </ul> <br><br>
+          
+              If you liked using this app, consider a small donation so that I keep working on improving it further and the experience remains ad-free. Icons from Flaticon and Iconduck.</p></div>
+
+            <button class="about-closebtn" onclick = "closePopup()">Close</button>
+          </div>
+
         <a target="_blank" href="https://www.buymeacoffee.com/poojasanwal"
           ><div class="sec3">
             <img id="coffee" src="assets/coffee.png" alt="Coffee" /></div
@@ -65,14 +86,21 @@
       </section>
 
       <section class="note-sec">
-        <input type="text" class="notes-header" placeholder="Give your note a title">
-        <textarea name="" class="textarea" cols="30" rows="10"> I am the notes body....</textarea>
+        <input
+          type="text"
+          class="note-header"
+          placeholder="Give your note a title"
+        />
+        <textarea name="" class="textarea" cols="30" rows="10">
+ I am the notes body....</textarea
+        >
       </section>
     </main>
 
     <footer class="footer">
-        <h5>Made with ❤️ by Pooja</h5>
+      <h5>Made with ❤️ by Pooja</h5>
     </footer>
-    <script src="js/main.js"></script>
+
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

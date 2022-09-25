@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300&display=swap');
 
 *{
     margin:0;
@@ -14,6 +16,8 @@
 /* ----------- Fonts ----------- */
 :root{
     --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Abyssinica SIL', serif;
+    --small-body-font: 'Source Sans Pro', sans-serif;
 }
 
 /* ----------- Navbar ----------- */
@@ -33,8 +37,7 @@ img{
     padding: 15px;
     display: flex;
     align-items:center;
-    border: solid 1px green; /*border*/
-    /* box-shadow: 2px 4px green; */
+    border: solid 1px green; 
 }
 
 .header .sec-one{
@@ -44,7 +47,6 @@ img{
 }
 .header .sec-two{
     display: flex;
-    flex: 1 0 50%;
     flex: auto 1 70%;
     justify-content: center;
 }
@@ -69,6 +71,51 @@ img{
    font-family: var(--heading-font)
 }
 
+/* ----------- About section popup ----------- */
+
+.about-popup{
+    background: wheat;
+    padding: 20px 40px;
+    width: 50%;
+    font-family: var(--body-font);
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    position: absolute;
+    transition: transform 0.4s, top 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa ;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.about-heading{
+    font-family: var(--heading-font);
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.about-para{
+    margin-top: 20px;
+}
+
+.about-list{}
+
+.about-closebtn{
+    padding: 10px 20px;
+    font-family: var(--small-body-font);
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgb(245, 204, 204);
+    border-radius: 10%;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px #aaaaaa ;
+}
 /* ----------- Main body and Sidebar ----------- */
 
 .main-body{
@@ -85,26 +132,30 @@ img{
     padding: 1em;
 }
 
-.main-body  .sidebar .notes-list .note-sideview{
+/* .main-body  .sidebar .notes-list .note-sideview{
     padding: 10px;
-}
+} */
 
-.note-title, .note-date {
+/* .note-title, .note-date {
     padding: 10px;
-}
+      
+} */
 
 .note-title{
     font-size: 1.2em;
+    font-family: var(--body-font);
 }
 
 .note-body {
     padding: 0 10px;
+    font-family: var(--small-body-font);
 }
 
 .note-date {
     color: #aaaaaa;
     font-style: italic;
     text-align: right;
+    font-family: var(--small-body-font); 
 }
 
 .main-body .note-sec{
@@ -125,10 +176,39 @@ img{
     font-family: var(--heading-font);
 }
 
-.notes__header, .textarea {
+.note__header, .textarea {
     border: none;
     outline: none;
     width: 100%;
+}
+
+/* ------------- Main notes body -------------- */
+
+.note-sec{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+    flex-grow: 1;
+}
+
+.note-header,
+.textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.note-header {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.textarea {
+    flex-grow: 1;
+    font-size: 1.em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none; /* Makes the textarea unresizable by the user */
 }
 
 .footer{
