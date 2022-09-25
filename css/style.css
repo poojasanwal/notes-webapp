@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}
+.header{
+    display: flex;
+}
+
+.sec-one{
+    display: flex;
+}
+.sec-two{
+    display: flex;
+}
+.sec-three{
+    display: flex;
+}
