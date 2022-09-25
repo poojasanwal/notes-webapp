@@ -1,31 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes Webapp</title>
-</head>
-<body>
-<header class = "header">
-    <div class="sec-one">
-        <div class="sec1"><img id="icon" src="assets/notes_icon.png" alt="Notes icon"></div>
-        <div class="sec1"><img id="list-view" src="assets/list_view.png" alt="List view"></div>
-        <div class="sec1"><img id="box-view"src="assets/box_view.png" alt="Grid view"></div>
-    </div>
-    <div class="sec-two">
-        <div class="sec2"><img id="new-note" src="assets/new_note.png" alt="New note"></div>
-        <div class="sec2"><img id="copy-note" src="assets/copy_note.png" alt="Copy note"></div>
-        <div class="sec2"><img id="text" src="assets/text_icon.png" alt="Text features"></div>
-        <div class="sec2"><img id="trash" src="assets/trash.png" alt="Delete"></div>
-    </div>
-    <div class="sec-three">
-        <div class="sec3"><img id="about" src="assets/about.png" alt="About"></div>
-        <div class="sec3"><img id="coffee" src="assets/coffee.png" alt="Coffee"></div>
-    </div>
-</header>
+  </head>
+  <body>
+    <header class="header">
+      <div class="sec-one">
+        <div class="sec1">
+          <img id="icon" src="assets/notes_icon.png" alt="Notes icon" />
+        </div>
+        <div class="sec1" id="heading">Web Notes</div>
+        <div class="sec1">
+          <img id="list-view" src="assets/list-view.png" alt="List view" />
+        </div>
+        <div class="sec1">
+          <img id="box-view" src="assets/box_view.png" alt="Grid view" />
+        </div>
+      </div>
+      <div class="sec-two">
+        <div class="sec2">
+          <img id="new-note" src="assets/new_note.png" alt="New note" />
+        </div>
+        <div class="sec2">
+          <img id="copy-note" src="assets/copy_note.png" alt="Copy note" />
+        </div>
+        <div class="sec2">
+          <img id="text" src="assets/text_icon.png" alt="Text features" />
+        </div>
+        <div class="sec2">
+          <img id="trash" src="assets/trash.png" alt="Delete" />
+        </div>
+      </div>
+      <div class="sec-three">
+        <a href=""
+          ><div class="sec3">
+            <img id="about" src="assets/about.png" alt="About" /></div
+        ></a>
+        <a target="_blank" href="https://www.buymeacoffee.com/poojasanwal"
+          ><div class="sec3">
+            <img id="coffee" src="assets/coffee.png" alt="Coffee" /></div
+        ></a>
+      </div>
+    </header>
 
-<script src= "js/main.js"></script>
-</body>
+    <main class="main-body">
+      <section class="sidebar">
+        <div class="notes-list">
+          <div class="note_sideview">
+            <div class="note-title">Devsnest</div>
+            <div class="note-body">I learnt CSS flexbox today!</div>
+            <div class="note-date">Thursday 3:30pm</div>
+          </div>
+
+          <div class="note_sideview">
+            <div class="note-title">Devsnest</div>
+            <div class="note-body">I learnt CSS flexbox today!</div>
+            <div class="note-date">Thursday 3:30pm</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="note-sec">
+        <input type="text" class="notes-header" placeholder="Give your note a title">
+        <textarea name="" class="textarea" cols="30" rows="10"> I am the notes body....</textarea>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <h5>Made with ❤️ by Pooja</h5>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

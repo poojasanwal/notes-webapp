@@ -1,23 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----------- Colours ----------- */
+:root{
+    --heading-color: brown;
+}
+
+/* ----------- Fonts ----------- */
+:root{
+    --heading-font: 'Poppins', sans-serif;
+}
+
+/* ----------- Navbar ----------- */
+
 img{
+    width: 20px;
+    height: 20px;
+    margin: 0px 18px 0px 18px;
+}
+
+.header .sec-one #box-view{
+    width: 27px;
+    height: 27px;
+}
+.header{
+    background-color: rgb(232, 232, 184);
+    padding: 15px;
+    display: flex;
+    align-items:center;
+    border: solid 1px green; /*border*/
+    /* box-shadow: 2px 4px green; */
+}
+
+.header .sec-one{
+    display: flex;
+    flex: 1 1 15%;
+    justify-content: flex-start;
+}
+.header .sec-two{
+    display: flex;
+    flex: 1 0 50%;
+    flex: auto 1 70%;
+    justify-content: center;
+}
+.header .sec-three{
+    display: flex;
+    float: right;
+    flex: 1 1 15%;
+    justify-content: flex-end;
+}
+
+.header .sec-one #list-view{
+    width: 25px;
+    height: 25px;
+}
+.header .sec-one #icon{
     width: 30px;
     height: 30px;
 }
-.header{
-    display: flex;
+
+.header .sec-one #heading{
+   font-size: 18px;
+   font-family: var(--heading-font)
 }
 
-.sec-one{
+/* ----------- Main body and Sidebar ----------- */
+
+.main-body{
+    padding: 20px;
     display: flex;
+    height: 100vh;
 }
-.sec-two{
-    display: flex;
+
+.main-body .sidebar{
+    width: 25%;
+    border: right 2px solid green;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 1em;
 }
-.sec-three{
-    display: flex;
+
+.main-body  .sidebar .notes-list .note-sideview{
+    padding: 10px;
 }
+
+.note-title, .note-date {
+    padding: 10px;
+}
+
+.note-title{
+    font-size: 1.2em;
+}
+
+.note-body {
+    padding: 0 10px;
+}
+
+.note-date {
+    color: #aaaaaa;
+    font-style: italic;
+    text-align: right;
+}
+
+.main-body .note-sec{
+    padding: 10px;
+    width: 75%
+}
+
+.main-body .note-sec .notes-header{
+    padding: 10px;
+    width: 100%;
+    font-family: var(--heading-font);
+}
+
+.main-body .note-sec textarea{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    font-family: var(--heading-font);
+}
+
+.notes__header, .textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.footer{
+    text-align: center;
+    margin: 10px;
+    font-family: var(--heading-font);
+}
+
+
