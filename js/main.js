@@ -1,13 +1,64 @@
-import notesAPI from "./notesAPI.js"
+import notesView from "./notesView.js";
+import notesAPI from "./notesAPI.js";
 
-// --------- About popup -------
+export default class App {
+    constructor(root) {
+        this.notes = [];
+        this.activeNote = null;
+        this.view = new notesView(root, this._handlers());
 
-let popup = document.getElementById("about-popup");
+        this._refreshNotes();
+    }
 
-function openPopup(){
-    popup.classList.add("open-popup");
-}
+    _refreshNotes() {
+        const notes = notesAPI.getAllNotes();
 
-function closePopup(){
-    popup.classList.remove("open-popup");
+        this._setNotes(notes);
+
+        if (notes.length > 0) {
+            this._setActiveNote(notes[0]);
+        }
+    }
+
+    _setNotes(notes) {
+        this.notes = notes;
+        this.view.updateNoteList(notes);
+        this.view.updateNotePreviewVisibility(notes.length > 0);
+    }
+
+    _setActiveNote(note) {
+        this.activeNote = note;
+        this.view.updateActiveNote(note);
+    }
+
+    _handlers() {
+        return {
+            onNoteSelect: noteId => {
+                const selectedNote = this.notes.find(note => note.id == noteId);
+                this._setActiveNote(selectedNote);
+            },
+            onNoteAdd: () => {
+                const newNote = {
+                    title: "Give your note a heading",
+                    body: "Write your note here..."
+                };
+
+                notesAPI.saveNote(newNote);
+                this._refreshNotes();
+            },
+            onNoteEdit: (title, body) => {
+                notesAPI.saveNote({
+                    id: this.activeNote.id,
+                    title,
+                    body
+                });
+
+                this._refreshNotes();
+            },
+            onNoteDelete: noteId => {
+                notesAPI.deleteNote(noteId);
+                this._refreshNotes();
+            },
+        };
+    }
 }

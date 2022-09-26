@@ -11,6 +11,9 @@
 /* ----------- Colours ----------- */
 :root{
     --heading-color: brown;
+    --header-color: #fe9c8f;
+    --about-color: #fff5ee ;
+    --button-color:  #fe9c8f;
 }
 
 /* ----------- Fonts ----------- */
@@ -33,7 +36,7 @@ img{
     height: 27px;
 }
 .header{
-    background-color: rgb(232, 232, 184);
+    background-color: var(--header-color);
     padding: 15px;
     display: flex;
     align-items:center;
@@ -73,8 +76,12 @@ img{
 
 /* ----------- About section popup ----------- */
 
+#about{
+    cursor: pointer;
+}
+
 .about-popup{
-    background: wheat;
+    background: var(--about-color);
     padding: 20px 40px;
     width: 50%;
     font-family: var(--body-font);
@@ -83,7 +90,7 @@ img{
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
     position: absolute;
-    transition: transform 0.4s, top 0.5s;
+    transition: transform 0.4s, top 0.4s;
     box-shadow: 5px 5px 5px #aaaaaa ;
 }
 
@@ -103,14 +110,12 @@ img{
     margin-top: 20px;
 }
 
-.about-list{}
-
 .about-closebtn{
     padding: 10px 20px;
     font-family: var(--small-body-font);
     font-size: 1em;
     cursor: pointer;
-    background-color: rgb(245, 204, 204);
+    background-color: var(--button-color);
     border-radius: 10%;
     border: none;
     margin-top: 10px;

@@ -8,10 +8,11 @@
     <title>Notes Webapp</title>
   </head>
   <body>
+
     <header class="header">
       <div class="sec-one">
         <div class="sec1">
-          <img id="icon" src="assets/notes_icon.png" alt="Notes icon" />
+          <img id="icon" src="assets/webnotes-icon.png" alt="Notes icon" />
         </div>
         <div class="sec1" id="heading">Web Notes</div>
         <div class="sec1">
@@ -44,19 +45,19 @@
           <div class="sec3 about-popup" id="about-popup">
             <div>
             <h2 class="about-heading">A little something about Web notes:</h2>
-            <p class="about-para">Web notes is an offline-capable Progressive Web App. <br><br>
+            <p class="about-para">Web notes is simple and rogressive notes Web App. <br><br>
 
               The app serves the following features: <br><br>
               <ul class="about-list">
-                <li class="about-list-item">Write notes which are then saved to the browser's localStorage.</li>
-                <li class="about-list-item">Installable on supported browsers for offline usage.</li>
-                <li class="about-list-item">"Add To Home Screen" feature on Android-supported devices to launch the app from the home screen.</li>
-                <li class="about-list-item">Privacy-focused - We'll never collect your precious data.</li>
-                <li class="about-list-item">Light-weight - Loads almost instantly.</li>
+                <li class="about-list-item">It helps you write notes which are then saved to the browser's local storage.</li>
+                <li class="about-list-item">You can change the view between list view and grid view.</li>
+                <li class="about-list-item">You get to copy the entire note with just one click on the copy icon.</li>
+                <li class="about-list-item">You can bold, italisize and underline parts of your note for better comprehension.</li>
+                <li class="about-list-item">It is light-weight and thus loads almost instantly.</li>
                 <li class="about-list-item">It's open-source!</li>
               </ul> <br><br>
           
-              If you liked using this app, consider a small donation so that I keep working on improving it further and the experience remains ad-free. Icons from Flaticon and Iconduck.</p></div>
+              If you liked using this app, consider a small <a href="https://www.buymeacoffee.com/poojasanwal" target="_blank">donation</a> so that I keep working on improving it further and the experience remains ad-free. Icons from Flaticon and Iconduck.</p></div>
 
             <button class="about-closebtn" onclick = "closePopup()">Close</button>
           </div>
@@ -69,15 +70,15 @@
     </header>
 
     <main class="main-body">
-      <section class="sidebar">
+     <section class="sidebar">
         <div class="notes-list">
-          <div class="note_sideview">
+          <div class="note-sideview note-sideview--selected">
             <div class="note-title">Devsnest</div>
             <div class="note-body">I learnt CSS flexbox today!</div>
             <div class="note-date">Thursday 3:30pm</div>
           </div>
-
-          <div class="note_sideview">
+ 
+          <div class="note-sideview note-sideview--selected">
             <div class="note-title">Devsnest</div>
             <div class="note-body">I learnt CSS flexbox today!</div>
             <div class="note-date">Thursday 3:30pm</div>
@@ -101,6 +102,7 @@
       <h5>Made with ❤️ by Pooja</h5>
     </footer>
 
-    <script src="js/main.js" type="module"></script>
+    <script src="js/about.js"></script>
+    <script src="./js/app.js" type="module" ></script>
   </body>
 </html>
