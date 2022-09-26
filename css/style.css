@@ -37,10 +37,10 @@ img{
 }
 .header{
     background-color: var(--header-color);
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items:center;
-    border: solid 1px green; 
+    border: solid 1px black; 
 }
 
 .header .sec-one{
