@@ -11,9 +11,9 @@
 /* ----------- Colours ----------- */
 :root{
     --heading-color: brown;
-    --header-color: #fe9c8f;
+    --header-color: #C8DBBE;
     --about-color: #fff5ee ;
-    --button-color:  #fe9c8f;
+    --button-color: #9F8772;
 }
 
 /* ----------- Fonts ----------- */
@@ -121,6 +121,7 @@ img{
     margin-top: 10px;
     box-shadow: 5px 5px 5px #aaaaaa ;
 }
+
 /* ----------- Main body and Sidebar ----------- */
 
 .main-body{
@@ -135,6 +136,8 @@ img{
     flex-shrink: 0;
     overflow-y: auto;
     padding: 1em;
+    border-right: 1px solid grey;
+    /* box-shadow: 3px 3px 3px 1px grey; */
 }
 
 /* .main-body  .sidebar .notes-list .note-sideview{
@@ -145,6 +148,11 @@ img{
     padding: 10px;
       
 } */
+
+.note-sideview{
+    border-bottom: 1px grey solid;
+    padding: 5px;
+}
 
 .note-title{
     font-size: 1.2em;
