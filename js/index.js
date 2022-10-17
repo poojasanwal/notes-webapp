@@ -4,3 +4,6 @@
 // 3. Delete note
 // 4. Copy all text
 
+//Other feature:
+// List and grid view
+
